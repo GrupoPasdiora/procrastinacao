@@ -26,7 +26,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--bg-brown-dark) 0%, var(--bg-brown) 50%, var(--bg-brown-light) 100%);
+            background: linear-gradient(135deg, #4a3d35 0%, #5a4a3f 50%, #6b5849 100%);
             min-height: 100vh;
             padding: 20px;
             color: var(--text-cream);
@@ -50,10 +50,7 @@
             margin-bottom: 5px;
             font-weight: 300;
             letter-spacing: 3px;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #f5ecd9;
             font-family: 'Georgia', serif;
         }
 
@@ -717,8 +714,6 @@
                 </div>
 
                 <div class="center-section">
-                    <button class="cta-button" id="btnReset">← Fazer Teste Novamente</button>
-                    <br>
                     <a href="https://pay.cakto.com.br/38ru8or_852246" class="whatsapp-button" target="_blank">
                         ✦ Faça seu Diagnóstico ELO ✦
                     </a>
@@ -797,9 +792,6 @@
             document.getElementById('progressText').textContent = `Questão ${n} de ${totalQuestions}`;
 
             currentQuestion = n;
-
-            // Scroll suave para o topo
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // Função próxima questão
@@ -963,7 +955,6 @@
             document.getElementById('btnNext').addEventListener('click', nextQuestion);
             document.getElementById('btnPrev').addEventListener('click', previousQuestion);
             document.getElementById('btnSubmit').addEventListener('click', submitTest);
-            document.getElementById('btnReset').addEventListener('click', resetTest);
 
             setupOptionHighlight();
             showQuestion(1);
